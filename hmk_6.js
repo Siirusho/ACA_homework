@@ -26,7 +26,7 @@ function comibnation(str,el, res=''){
 function shuffleArr(arr){
   const newArr=[...arr];
   for(let i = 0; i < arr.length; ++i){
-    const rand = Math.ceil(Math.random() * (i));
+    const rand = Math.floor(Math.random() * (i));
     [newArr[i], newArr[rand]]=[newArr[rand], newArr[i]];
   }
   return newArr;
@@ -82,19 +82,20 @@ function forEach(arr, callBack) {
 
 //6. Create function which will store user object inside of a closure
 
-//not sure)
-function user(){
-  name = this.name;
-  password = this.password;
-  balance = this.balance;
-  let getName = () => name;
-  let deposit = amount => this.balance += amount;
+function createUser(name,password,balance){
+  user={name,password,balance}
+  let getName = () => user.name;
+  let deposit = amount => user.balance += amount;
   let resetPassword = (newPassord, oldPassword) => {
-    if(this.password = oldPassword) this.password = newPassord;
+    if(user.password = oldPassword) user.password = newPassord;
     else return "Access denied";
   }
-  let getBalance = (password) => {
-    if(password === this.password) return this.balance;
+  let getBalance = (pass) => {
+    if(pass === user.password) return balance;
     else return "Access denied";
+  }
+  return {
+    getName, deposit, resetPassword, getBalance
   }
 }
+
