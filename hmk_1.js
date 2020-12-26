@@ -1,10 +1,10 @@
-//1.Given a number. Print “odd” if the number is odd and “even” if it’s even.
+//1.Given a number. Print â€œoddâ€ if the number is odd and â€œevenâ€ if itâ€™s even.
 function isEvenOrOdd(num) {
 	if (num === 1 || num === 0) return 'Neither even, nor odd';
 	else if (num % 2 === 0) return 'Even';
  return 'Odd';
 }
-//isEvenOrOdd(10)
+//isEvenOrOdd(10);
 
 
 //2.Given five numbers as input. Calculate and print the average of the numbers(without using arrays).
