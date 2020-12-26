@@ -34,7 +34,7 @@ function violatedIndex(arr) {
 	}
 	return 'Array is sorted';
 }
-//violatedIndex([2, 12, 3, 15, 48, 64])
+//violatedIndex([2, 12, 3, 15, 48, 64]);
 
 //4. Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
 function largestProd(arr) {
