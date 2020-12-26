@@ -6,7 +6,7 @@ function separateOddsAndEvens(arr = []){
   }
   return {odds, evens};
 }
-//separateOddsAndEvens([45, 12, 3, 6, 17, 0])
+//separateOddsAndEvens([45, 12, 3, 6, 17, 0]);
 
 //2. Write a function filterRange(arr, a, b) that gets an array, looks for elements between a and b in it and returns an array of them.
 function filterRange(arr, a, b){
@@ -18,7 +18,7 @@ function filterRange(arr, a, b){
 }
 //filterRange([-10, -8, 0, 10, 20], -100, 15)
 
-//3. Write a function which finds corresponding object by it’s id and print it. Elsewhere it should print error message.
+//3. Write a function which finds corresponding object by itâ€™s id and print it. Elsewhere it should print error message.
 function findById(arr, id){
   for(let i = 0; i < arr.length; ++i){
     if(arr[i].id === id) return arr[i];
