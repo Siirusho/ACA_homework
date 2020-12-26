@@ -41,21 +41,46 @@ let array=[
 ];
 //sortByStatus(array);
 
-//4. Given an array and a number N.  Write a recursive function that rotates an array N places to the left. (Hint: to add element to the beginning use arr.unshift())
-function replace(arr, num, i = 0){
-  if(num > 0 && i === num) return arr.splice(num, arr.length + 1);
-  arr.push(arr[i]);
-
- return replace(arr, num, i + 1);
+//4. Given an array and a number N. Â Write a recursive function that rotates an array N places to the left. (Hint: to add element to the beginning use arr.unshift())
+function repeat(arr,el){
+  let res=[]
+ for(let i=0; i<el;++i){
+   let newarr=[]
+  for(let j = i + 1; j < arr.length; ++j){
+    newarr.push(arr[j])
+    res.push(newarr)
+  }
+ }
+ return res
 }
-//replace(['a','b','c','d','e', 'f', 'g', 'h'],3);
+//repeat([1,2,3,4],2);
 
 //5.Create a function that builds a tree like object given an array with object which contains parent and id properties.
 
 
 
 //6. Write a JavaScript function to get all possible subsets of given length of the given array. Assume that all elements in the array are unique.
-
+function combinationUtil( arr, n, r, index=0, data=[], i=0) {
+      if (index == r) { 
+            for (let j = 0; j < r; j++) 
+                console.log(data[j] + " "); 
+                console.log(" ")
+            return; 
+        } 
+         if (i >= arr.length) {
+             return; 
+         } 
+        data[index] = arr[i]; 
+        combinationUtil(arr, arr.length, r, index + 1,data, i + 1);
+        combinationUtil(arr, arr.length, r, index, data, i + 1);
+    }
+    function printCombination(arr, r) 
+    { 
+        let data =[]
+        data.push(arr[r]);  
+        combinationUtil(arr, arr.length, r, 0, data, 0); 
+    }
+    printCombination([1,2,3,4], 3)
 
 
 //7. Create constructor function which instances would be objects with already implemented method &quot;map&quot; (like Array.map)
