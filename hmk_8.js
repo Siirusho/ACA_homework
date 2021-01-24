@@ -1,3 +1,4 @@
+//1
 class Employee {
     constructor(id, firstName, lastName, position, salary, workingHours) {
         this.id = id;
@@ -32,7 +33,7 @@ class Employee {
     }
 }
 
-
+//2
 class Account {
     constructor(id, name, balance) {
         this.id = id;
@@ -82,6 +83,9 @@ class Account {
     }
 }
 
+
+//3
+//not sure
 class Person {
     constructor(firstName, lastName, gender, age) {
         this.firstName = firstName;
